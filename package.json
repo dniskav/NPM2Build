@@ -1,0 +1,21 @@
+{
+  "name": "npmtut",
+  "version": "1.0.0",
+  "description": "try to avoid the use of grunt and gulp",
+  "main": "app.js",
+  "scripts": {
+    "serve": "http-server -p 9090 app/",
+    "live-reload": "live-reload ./app --port 9091 ",
+    "serve-lvr": "npm run serve & npm run live-reload",
+    "build": "jade ./views -P --out ./app",
+    "watch": "nodemon -w ./views/ --ext '.' --exec npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "latest",
+    "jade": "^1.9.1",
+    "live-reload": "latest",
+    "nodemon": "^1.3.2"
+  }
+}
